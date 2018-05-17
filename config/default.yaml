@@ -1,0 +1,35 @@
+homeserverUrl: "https://t2bot.io"
+asToken: "YOUR_TOKEN_HERE"
+userId: "@privacypolicy:t2bot.io"
+
+listener:
+  bind: '0.0.0.0'
+  port: 8080
+  path: '/'
+  repoOwner: 't2bot'
+  repoName: 'privacy-policy'
+  branch: 'master'
+  file: 'PRIVACY.md'
+  secret: 'YOUR_SECRET_HASH'
+  effectiveKeyword: "Effective:"
+
+message:
+  delaySeconds: 300 # Give some time for the automated build to catch up
+  htmlTemplate: |
+    <b>An update to the privacy policy has been made</b><br />
+    A full change summary is available here: <a href="{compare_url}">{compare_url}</a><br />
+    These changes come into effect {effective_date}. For more information, please visit <a href="https://matrix.to/#/#help:t2bot.io">#help:t2bot.io</a>
+  textTemplate: |
+    **An update to the privacy policy has been made**
+    A full change summary is available here: {compare_url}
+    These changes come into effect {effective_date}. For more information, please visit #help:t2bot.io
+
+# Settings for controlling how logging works
+logging:
+  file: logs/privacypolicy.log
+  console: true
+  consoleLevel: info
+  fileLevel: verbose
+  rotate:
+    size: 52428800 # bytes, default is 50mb
+    count: 5

@@ -1,0 +1,32 @@
+{
+  "name": "matrix-privacy-policy-bot",
+  "version": "1.0.0",
+  "description": "A matrix bot to notify rooms about changes to a privacy policy that is hosted on Github. Purpose-built for t2bot.io's privacy policy: https://github.com/t2bot/privacy-policy",
+  "main": "./lib/index.js",
+  "author": "Travis Ralston",
+  "license": "GPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/turt2live/matrix-privacy-policy-bot.git"
+  },
+  "scripts": {
+    "build": "tsc",
+    "lint": "tslint --project ./tsconfig.json --type-check -t stylish"
+  },
+  "devDependencies": {
+    "tslint": "^5.10.0",
+    "typescript": "^2.8.3"
+  },
+  "dependencies": {
+    "@types/node": "^10.1.0",
+    "config": "^1.30.0",
+    "github-webhook-handler": "^0.7.1",
+    "js-yaml": "^3.11.0",
+    "matrix-bot-sdk": "^0.1.9",
+    "matrix-js-snippets": "^0.2.5",
+    "mkdirp": "^0.5.1",
+    "node-localstorage": "^1.3.1",
+    "string-template": "^1.0.0",
+    "striptags": "^3.1.1"
+  }
+}
