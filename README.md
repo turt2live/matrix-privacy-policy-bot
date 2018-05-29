@@ -26,7 +26,7 @@ Instructions:
     hs_token: "ANOTHER_RANDOM_STRING_YOU_GENERATE"
     id: "privacy_policy"  
     url: null
-    rate_limit: false   # This is intentional
+    rate_limited: false   # This is intentional
     sender_localpart: "privacypolicy_bot" # Set this to something you can forget about
     namespaces:
       users:
